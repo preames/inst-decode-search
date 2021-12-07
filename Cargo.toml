@@ -1,0 +1,20 @@
+[package]
+name = "inst-decode-search"
+version = "0.1.0"
+authors = ["Philip Reames <philip@switchbackcompilers.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+lazy_static = "*"
+itertools = "*"
+hex = "0.4"
+num-traits = "0.2.10"
+console = "0.14"
+
+# Newer versions of yaxpeax appear to fail to buid (likely fixable for anyone
+# actually knowledgeable in rust); these are the exact versions originally used.
+yaxpeax-arch = "0.0.4"
+yaxpeax-x86 = "0.1.5"
+yaxpeax-ia64 = "0.1.3"

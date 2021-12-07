@@ -1,0 +1,38 @@
+
+[package]
+name = "inst-decode-search-fuzz"
+version = "0.0.0"
+authors = ["Automatically generated"]
+publish = false
+edition = "2018"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.3"
+
+[dependencies.inst-decode-search]
+path = ".."
+
+# Prevent this from interfering with workspaces
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "fuzz_single_inst"
+path = "fuzz_targets/fuzz_single_inst.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "fuzz_boundaries"
+path = "fuzz_targets/fuzz_boundaries.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "fuzz_vex"
+path = "fuzz_targets/fuzz_vex.rs"
+test = false
+doc = false
