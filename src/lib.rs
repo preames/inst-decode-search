@@ -13,18 +13,18 @@ extern crate lazy_static;
 fn compute_inst_list() -> Vec<Vec<u8>> {
     let mut vec = Vec::new();
     // ENDBR64
-    //vec.push(hex::decode("f30f1efa").unwrap());
+    vec.push(hex::decode("f30f1efa").unwrap());
     // wrpkru "0F01EF"
     // xrstor 0x0FAE[2|6|A][8-F]
-    vec.push(hex::decode("0F01EF").unwrap());
-    for c1 in &['2', '6', 'F'] {
-        for c2 in &['8', '9', 'A', 'B', 'C', 'D', 'E', 'F'] {
-            let mut str = String::from("0FAE");
-            str.push(*c1);
-            str.push(*c2);
-            vec.push(hex::decode(&str).unwrap());
-        }
-    }
+    // vec.push(hex::decode("0F01EF").unwrap());
+    // for c1 in &['2', '6', 'F'] {
+    //     for c2 in &['8', '9', 'A', 'B', 'C', 'D', 'E', 'F'] {
+    //         let mut str = String::from("0FAE");
+    //         str.push(*c1);
+    //         str.push(*c2);
+    //         vec.push(hex::decode(&str).unwrap());
+    //     }
+    // }
     return vec;
 }
 
