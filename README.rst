@@ -36,6 +36,11 @@ The main binary built from the top level package isn't particular interesting.  
 
 I'll note that you could write a much more sophisticated brute forcer which tried to take advantage of space pruning resulting from successful prefix parses.  It was while thinking about writing such a thing (and how to convince myself it was actually correct), that I stumbled across the idea of using fuzzing.
 
+Findings
+--------
+
+A manually selected list of "interesting" results can be found in "pkru-findings.s" and "endbr64-findings.s" in the repo.
+
 Configuration
 -------------
 
